@@ -27,6 +27,8 @@ int main(void)
 		printf("%i is zero\n", n);
 	}
 	else
-		printf("%i is a negative\n", n);
+	{
+	printf("%i is a negative\n", n);
+	}
 	return (0);
 }
