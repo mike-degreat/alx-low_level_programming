@@ -30,6 +30,5 @@ int main(void)
 	{
 		printf("%i is negative\n", n);
 	}
-	
 	return (0);
 }
