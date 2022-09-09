@@ -1,2 +1,2 @@
-         # C - Variables, if, else, while statements
-                      ********
+#C - Variables, if, else, while statement
+********
