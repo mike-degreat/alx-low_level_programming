@@ -10,13 +10,14 @@
 
 int main(void)
 {
-	char alpha = 'a';
+	char ch = 'a';
 
-	while (alpha <= 'z')
+	while (ch <= 'z')
 	{
-		if (alpha == 'e' || alpha == 'q')
-			++alpha;
-		putchar(alpha);
+		if (ch == 'e' || ch == 'q')
+			++ch;
+		putchar(ch);
+		++ch;
 	}
 	putchar('\n');
 
