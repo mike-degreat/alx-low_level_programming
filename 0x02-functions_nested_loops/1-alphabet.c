@@ -1,12 +1,14 @@
 #include "main.h"
 
 /**
- * print_alphabet: uses _putchar function to print alpha in lowercase a-z
+ * main - Entry point
  *
- * Return: 0 if successful
+ * short description print_alphabet: uses _putchar to print lower case letters
+ *
+ * Return: Always (0)
 */
 
-void print_alphabet(void)
+void print_alphabet(void);
 {
 	int alpha;
 
