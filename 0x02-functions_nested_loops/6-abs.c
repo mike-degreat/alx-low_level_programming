@@ -2,7 +2,7 @@
 /**
  * _abs - function that declares the absolute integer value
  *
- * @int - takes in integer type for input function
+ * @y - takes in integer type for input function
  *
  * Return: Always 0 (success)
 */
