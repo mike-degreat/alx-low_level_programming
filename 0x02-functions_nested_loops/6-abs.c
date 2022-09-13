@@ -9,9 +9,7 @@
 int _abs(int y)
 {
 	if (y < 0)
-	{
 		y *= (-1);
-		return (y);
-	}
+	return (y);
 }
 
