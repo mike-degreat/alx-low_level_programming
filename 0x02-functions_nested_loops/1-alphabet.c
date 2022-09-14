@@ -1,7 +1,8 @@
-#include "main.h"
+#include"main.h"
+#include<stdio.h>
 
 /**
- * main - Entry point
+ * print_alphabet - Entry point
  *
  * short description print_alphabet: uses _putchar to print lower case letters
  *
