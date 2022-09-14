@@ -6,8 +6,7 @@
 */
 int main(void)
 {
-	unsigned long sum, fib_num1, fib_num2;
-	float total_sum;
+	long int total_sum, sum, fib_num1, fib_num2;
 
 	total_sum = 0;
 	sum = 0;
@@ -24,7 +23,7 @@ int main(void)
 		fib_num1 = fib_num2;
 		fib_num2 = sum;
 	}
-	printf("%f\n", total_sum);
+	printf("%li\n", total_sum);
 
 	return (0);
 }
