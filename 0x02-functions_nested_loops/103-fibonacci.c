@@ -6,8 +6,8 @@
 */
 int main(void)
 {
-	unsigned long  total_sum, fib_num1, fib_num2;
-	float sum;
+	unsigned long sum, fib_num1, fib_num2;
+	float total_sum;
 
 	total_sum = 0;
 	sum = 0;
