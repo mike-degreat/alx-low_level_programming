@@ -10,21 +10,22 @@ int main(void)
 {
 	int n;
 
-	for (n = 1; n < 101; n++)
+	for (n = 1; n <= 100; ++n)
 	{
-		if (n % 5 == 0 && n % 3 == 0)
-			putchar("FizzBuzz ");
-		else if (n % 5 == 0)
-			if (n == 100)
-				putchar("Buzz");
-			else
-				putchar("Buzz ");
-		else if (n % 3 == 0)
-			putchar("Fizz");
+		if (n % 3 == 0 && !(n % 5 == 0))
+			printf("Fizz");
+		else if (n % 5 == 0 && !(n % 3 == 0))
+			printf("Buzz");
+		else if (n % 3 == 0 && n % 5 == 0)
+			printf("FizzBuzz");
 		else
-			putchar("%d", n);
+			printf("%d", n);
+		
+		if (n != 100)
+			printf(" ");
+		else
+			printf("\n");
 	}
-	putchar("\n");
 
 	return (0);
 }
