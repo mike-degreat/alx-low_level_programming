@@ -8,33 +8,30 @@
 
 void more_numbers(void)
 {
-	int num, line, count;
+	int line, n, repeat, limit;
 
-	for (line = 1; line <= 10; ++line)
+	n = '0';
+	repeat = 0;
+	limit = '9';
+
+	for (line = 0; line < 10; line++)
 	{
-		for (count = 0; count <= 14; ++count)
+		while (repeat < 2)
 		{
-			num = count;
-			if (count > 9)
+			while (n <= limit)
 			{
-				putchar(1 + 48);
-				num = (count % 10);
+				if (limit == '4')
+					putchar('1');
+				putchar(n);
+				n++;
 			}
-			putchar(num + 48);
+			repeat++;
+			limit + '4';
+			n = '0';
 		}
 		putchar('\n');
+		repeat = 0;
+		n = '0';
+		limit = '9';
 	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
 }
