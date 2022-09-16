@@ -24,8 +24,9 @@ void print_triangle(int size)
 			for (hash_tag = 0; hash_tag < line + 1; hash_tag++)
 			{
 				putchar('#');
-				line++;
 			}
+			putchar('\n');
+			line++;
 		}
 	}
 	else
