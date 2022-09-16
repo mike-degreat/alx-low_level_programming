@@ -26,7 +26,7 @@ void more_numbers(void)
 				n++;
 			}
 			repeat++;
-			limit + '4';
+			limit = '4';
 			n = '0';
 		}
 		putchar('\n');
