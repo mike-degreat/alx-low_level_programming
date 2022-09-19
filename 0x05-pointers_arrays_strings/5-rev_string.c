@@ -8,18 +8,19 @@
 
 void rev_string(char *s)
 {
-	int i, j;
-	char ch;
+	int i = 0, j = 0;
+	char str[500];
 
-	/*find string length without null char*/
-	for (i = 0; s[i] != '\0'; ++i)
-		;
-
-	/*swap the string by looping to half the string*/
-	for (i = 0; i < 1 / 2; ++j)
+	while (*(s + i))
 	{
-		ch = s[i];
-		s[i] = s[i - 1 - j]; /*-1 because the array starts from 0*/
-		s[i - 1 - j] = ch;
+		*(str + i) = *(s + i);
+		i++;
+	}
+	i = i - 1;
+	while (i >= 0)
+	{
+		*(s + i) = *(str + j);
+		j++;
+		i--;
 	}
 }
