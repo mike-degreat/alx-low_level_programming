@@ -9,26 +9,29 @@
 
 char *cap_string(char *s)
 {
-	int i = 0;
-	int j;
-	char a[] = ",;.!?(){}";
+	int i;
+	int prev;
 
-	while (*(s + i))
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*(s + i) >= 'a' && *(s + i) <= 'z')
+		prev = i - 1;
+		if (s[i] >= 'a' && s[i] <= 'z')
 		{
 			if (i == 0)
-				*(s + i) -= 'a' - 'A';
-			else
-			{
-				for (j = 0; j <= 12; j++)
-				{
-					if (a[j] == *(s + i - 1))
-						*(s + i) -= 'a' - 'A';
-				}
-			}
+			s[i] = s[i] - 32;
+		else if (s[prev] >= 9 && s[prev] <= 10)
+			s[i] = s[i] - 32;
+		else if (s[prev] >= 32 && s[prev] <= 34)
+			s[i] = s[i] - 32;
+		else if (s[prev] >= 40 && s[prev] <= 41)
+			s[i] = s[i] - 32;
+		else if (s[prev] == 46)
+			s[i] = s[i] - 32;
+		else if (s[prev] == 59)
+			s[i] = s[i] - 32;
+		else if (s[prev] == 123 || s[prev] == 125)
+			s[i] = s[i] - 32;
 		}
-		i++;
 	}
 	return (s);
 }
