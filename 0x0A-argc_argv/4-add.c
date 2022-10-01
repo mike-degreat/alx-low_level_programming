@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 		n = strtol(argv[1], &flag, 10);
 		if (*flag)
 		{
-			printf("Error\n");
+			puts("Error\n");
 			return (1);
 		}
 		else
