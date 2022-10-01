@@ -9,30 +9,25 @@
  *
  * Return: 0 if no errors, else 1
 */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int i, n, sum = 0;
-	char *flag;
+	int a = 0, i, j;
 
-	if (argc < 2)
+	for (i = 1; i < argc; i++)
 	{
-		printf("0\n");
-		return (0);
-	}
-	for (i = 1; argv[i]; i++)
-	{
-		n = strtol(argv[1], &flag, 10);
-		if (*flag)
+		for (j = 0; argv[i][j]; j++)
 		{
-			puts("Error\n");
-			return (1);
-		}
-		else
-		{
-			sum += n;
+			if (isdigit(argv[i][j]) == 0)
+			{
+				puts("Error");
+				return (1);
+			}
 		}
 	}
-	printf("%d\n", sum);
+	for (i = 1; i < argc; i++)
+	{
+		a += atoi(argv[i]);
+	}
+	printf("%d\n", a);
 	return (0);
 }
-
