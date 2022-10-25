@@ -1,11 +1,12 @@
 #include "main.h"
+#include<stdio.h>
 /**
- * print_last_digit - Function declared
+ * print_last_digit - Entry point
  * @i: the number initialized
  *
  * Description: prints the last digit of a number
  *
- *Returns : integer
+ * Return : integer
 */
 int print_last_digit(int i)
 {
