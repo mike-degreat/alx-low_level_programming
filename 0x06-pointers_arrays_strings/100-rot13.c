@@ -1,43 +1,34 @@
 #include "main.h"
-
 /**
- * rot13 - encodes a string using rot13
- * @src: string to encode
+ *rot13 - encodes strings using rot13.
+ *@s: pointer to string.
  *
- * Return: address of src
-*/
-
-char *rot13(const char *src)
+ *Return: pointer to encoded string.
+ */
+char *rot13(char *s)
 {
-	if (src == NULL)
+	int stringCount, rotation;
+	char r1[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+		     'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+		     'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+		     'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+		     'Z'};
+	char r2[] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+		     'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+		     'm', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+		     'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+		     'M'};
+
+	for (stringCount = 0; s[stringCount] != '\0'; stringCount++)
 	{
-		return (NULL);
-	}
-
-	char *result = malloc(strlen(src));
-
-	if (result != NULL)
-	{
-		strcpy(result, src);
-		char *current_char = result;
-
-		while (*current_char != '\0')
+		for (rotation = 0; rotation < 53; rotation++)
 		{
-			/*increment alphabet characters*/
-			if((*current_char >= 97 && *current_char <= 122) || (*current_char >= 65 && *current_char <= 90))
+			if (r1[rotation] == s[stringCount])
 			{
-				if (*current_char > 109 || (*current_char > 77 && *current_char < 91))
-					/*characters that wrap arount the start of the alphabet*/
-					*current_char -= 13;
-			}
-			else
-			{
-				/*characters that can be safely incremented*/
-				current_char += 13;
+				s[stringCount] = r2[rotation];
+				break;
 			}
 		}
-		current_char++;
 	}
-	return (result);
+	return (s);
 }
-

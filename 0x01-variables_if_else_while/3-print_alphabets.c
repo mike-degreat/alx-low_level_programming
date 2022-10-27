@@ -1,31 +1,27 @@
-#include<stdio.h>
+#include <stdio.h>
+
 
 /**
  * main - Entry point
  *
- * Description: Prints lowercase to uppercase
- *
  * Return: Always 0 (Success)
-*/
-
+ */
 int main(void)
 {
-	char lower = 'a';
-	char UPPER = 'A';
+	char l;
 
-	/*prints lowercase alpha a-z*/
-	while (lower <= 'z')
+	l = 'a';
+	while (l <= 'z')
 	{
-		putchar(lower);
-		++lower;
+		putchar(l);
+		l++;
 	}
-	/*prints uppercase alpha A-Z*/
-	while (UPPER <= 'Z')
+	l = 'A';
+	while (l <= 'Z')
 	{
-		putchar(UPPER);
-		++UPPER;
+		putchar(l);
+		l++;
 	}
 	putchar('\n');
-
 	return (0);
 }
